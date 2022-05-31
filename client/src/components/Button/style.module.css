@@ -1,0 +1,5 @@
+@import '../../../utils/vars.css';
+
+button {
+  background-color: var(--primary-color);
+}
