@@ -4,7 +4,7 @@ import db_connection from '../utils/db_connection';
 
 config();
 
-import auth from '../routes/auth';
+import auth from './routes/auth';
 
 const PORT: string | undefined = process.env.PORT;
 const DB_HOST: string | undefined = process.env.DB_HOST;
