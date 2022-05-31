@@ -44,7 +44,6 @@ router.post(
 
 router.post('/login', async (req: Request, res: Response) => {
   try {
-    console.log(jwt);
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user) {
