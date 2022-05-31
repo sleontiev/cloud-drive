@@ -1,20 +1,25 @@
 import express, { Express } from 'express';
 import { config } from 'dotenv';
-import dbConfig from './db';
+import db_connection from '../utils/db_connection';
 
 config();
 
-const PORT:string | undefined = process.env.PORT;
-const DB_HOST:string | undefined = process.env.DB_HOST;
+import auth from '../routes/auth';
+
+const PORT: string | undefined = process.env.PORT;
+const DB_HOST: string | undefined = process.env.DB_HOST;
 
 const app: Express = express();
 
+app.use(express.json());
+app.use('/api/auth', auth);
+
 const startServer = (): void => {
   try {
-    dbConfig.connect(DB_HOST as string);
+    db_connection.connect(DB_HOST as string);
     app.listen(PORT, () => {
-      console.log('App is running...')
-    })
+      console.log('App is running...');
+    });
   } catch (e: unknown) {
     if (typeof e === 'string') {
       throw new Error(e);
