@@ -1,5 +1,7 @@
 @import '../../../utils/vars.css';
 
-button {
-  background-color: var(--primary-color);
-}
+.main {}
+.primary {}
+.secondary {}
+.grey {}
+.transparent {} 
