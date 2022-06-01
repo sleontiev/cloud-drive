@@ -9,4 +9,5 @@
 .title {
   color: var(--dark-grey);
   margin-bottom: 55px;
+  width: 65%;
 }

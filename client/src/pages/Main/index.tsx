@@ -17,9 +17,9 @@ const Main = () => {
       </Header>
       <div className={cn(classes.main)}>
         <div>
-          <h2 className={cn(classes.title)}>
+          <h1 className={cn(classes.title)}>
             Храните все свои файлы в одном месте
-          </h2>
+          </h1>
           <Link to='/registration'>
             <Button text='Завести Диск' kind='main' />
           </Link>

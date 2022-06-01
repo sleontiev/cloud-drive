@@ -1,0 +1,18 @@
+@import '../../../utils/vars.css';
+
+.title {
+  color: var(--dark-grey);
+  text-align: center;
+  margin: 0;
+}
+
+.input {
+  margin-bottom: 25px;
+}
+
+.span {
+  color: var(--dark-grey);
+  font-size: var(--small);
+  text-align: center;
+  margin-top: 25px;
+}

@@ -1,18 +1,5 @@
 @import '../../../utils/vars.css';
 
-.login {
-  padding: 35px 35px;
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid var(--grey);
-}
-
 .logo {
   font-size: 24px;
   font-family: system-ui;
@@ -27,4 +14,8 @@
 
 .login__button {
   margin-bottom: 25px;
+}
+
+.link {
+  width: 100%;
 }

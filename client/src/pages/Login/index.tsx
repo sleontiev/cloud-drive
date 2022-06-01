@@ -7,6 +7,7 @@ import AnimateButton from '../../components/AnimateButton';
 
 import classes from './style.module.css';
 import cn from 'classnames';
+import Wrapper from '../../components/Wrapper';
 
 const Login = () => {
   const [data, setData] = useState<{ email: string; password: string }>({
@@ -14,7 +15,7 @@ const Login = () => {
     password: '',
   });
   return (
-    <div className={cn(classes.login)}>
+    <Wrapper>
       <Link to='/'>
         <AnimateButton />
       </Link>
@@ -42,8 +43,8 @@ const Login = () => {
         }}
       />
       <Button text='Войти' kind='primary' className={classes.login__button} />
-      <Button text='Создать диск' kind='secondary' />
-    </div>
+      <Link to='/registration'><Button className={cn(classes.link)} text='Создать диск' kind='secondary' /></Link>
+    </Wrapper>
   );
 };
 

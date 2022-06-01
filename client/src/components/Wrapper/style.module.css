@@ -1,0 +1,14 @@
+@import '../../../utils/vars.css';
+
+.wrapper {
+  padding: 35px 35px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--grey);
+}
