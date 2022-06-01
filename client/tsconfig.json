@@ -13,5 +13,5 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src", "utils/module.d.ts"]
+  "include": ["src", "types/module.d.ts", "types/png.d.ts", "types/svg.d.ts"]
 }

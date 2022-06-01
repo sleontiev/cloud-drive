@@ -1,7 +1,42 @@
 @import '../../../utils/vars.css';
 
-.main {}
-.primary {}
-.secondary {}
-.grey {}
-.transparent {} 
+button {
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.main {
+  padding: 15px 30px;
+  font-size: var(--large);
+  color: var(--white);
+  background: linear-gradient(45deg, var(--orange), var(--light-orange));
+  box-shadow: 0px 25px 85px 0px var(--yellow)
+}
+.primary {
+  background-color: var(--yellow);
+  font-size: var(--medium);
+  font-weight: bold;
+  padding: 10px 25px;
+}
+.secondary {
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px -10px var(--dark-grey);
+  font-size: var(--medium);
+  font-weight: bold;
+  padding: 10px 25px;
+}
+.secondary:hover {
+  background-color: var(--light-grey);
+}
+.grey {
+  background-color: var(--dark-grey);
+  font-size: var(--medium);
+  color: var(--white);
+  padding: 10px 20px;
+}
+
+.animate {
+  
+}

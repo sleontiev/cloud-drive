@@ -4,10 +4,14 @@
   --white: #ffffff;
   --orange: #ff6d70;
   --light-orange: #ff8b2c;
-  --grey: #444444;
+  --dark-grey: #444444;
+  --grey: #d4d8e0;
+  --light-grey: #f7f8fa;
+  --yellow: #ffdb4d;
   /*dimensions*/
   --radius: 40px;
   --small: 14px;
   --medium: 16px;
-  --large: 18px;
+  --large: 20px;
+  --transition: 0.3s;
 }

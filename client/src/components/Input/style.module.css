@@ -1,0 +1,26 @@
+@import '../../../utils/vars.css';
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--grey);
+  font-size: var(--large);
+  color: var(--dark-grey);
+  font-weight: bold;
+  padding: 10px 0px;
+  transition: var(--transition);
+}
+
+input:focus {
+  border-bottom: 1px solid var(--yellow);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--grey);
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px var(--white) inset;
+  -webkit-text-fill-color: var(--dark-grey);
+  transition: background-color 50s ease-in-out 0s;
+}

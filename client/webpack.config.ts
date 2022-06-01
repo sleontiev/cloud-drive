@@ -5,7 +5,7 @@ import {
 } from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
@@ -37,6 +37,18 @@ const config: Configuration = {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ],
   },
   resolve: {
@@ -48,14 +60,14 @@ const config: Configuration = {
     }),
     new HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css"
-    })
+      filename: '[name].[contenthash].css',
+    }),
   ],
   devtool: 'inline-source-map',
   devServer: {
     static: path.join(__dirname, 'build'),
     historyApiFallback: true,
-    port: 4000,
+    port: 3000,
     open: true,
     hot: true,
   },

@@ -1,0 +1,40 @@
+@import '../../../utils/vars.css';
+
+.button {
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 25px;
+  left: -20px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 20px -10px var(--dark-grey);
+  border-radius: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.button svg {
+  fill: var(--grey);
+  transform: rotate(180deg);
+  width: 12px;
+}
+
+.button__text {
+  display: none;
+  color: var(--dark-grey)
+}
+
+.button:hover {
+  width: 80px;
+}
+
+.button:hover .button__text {
+  display: block;
+}
+
+.button:hover svg {
+  display: none;
+}

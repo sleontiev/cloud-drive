@@ -1,0 +1,12 @@
+@import '../../../utils/vars.css';
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  color: var(--dark-grey);
+  margin-bottom: 55px;
+}
