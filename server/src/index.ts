@@ -5,12 +5,14 @@ import db_connection from '../utils/db_connection';
 config();
 
 import auth from './routes/auth';
+import cors from './middleware/cors.middleware';
 
 const PORT: string | undefined = process.env.PORT;
 const DB_HOST: string | undefined = process.env.DB_HOST;
 
 const app: Express = express();
 
+app.use(cors);
 app.use(express.json());
 app.use('/api/auth', auth);
 

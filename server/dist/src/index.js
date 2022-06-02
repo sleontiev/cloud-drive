@@ -8,9 +8,11 @@ const dotenv_1 = require("dotenv");
 const db_connection_1 = __importDefault(require("../utils/db_connection"));
 (0, dotenv_1.config)();
 const auth_1 = __importDefault(require("./routes/auth"));
+const cors_middleware_1 = __importDefault(require("./middleware/cors.middleware"));
 const PORT = process.env.PORT;
 const DB_HOST = process.env.DB_HOST;
 const app = (0, express_1.default)();
+app.use(cors_middleware_1.default);
 app.use(express_1.default.json());
 app.use('/api/auth', auth_1.default);
 const startServer = () => {

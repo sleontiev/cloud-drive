@@ -16,7 +16,7 @@ interface IRegistration {
 
 const registration = async (data: IRegistration) => {
   const response = await axios.post(
-    'http://localhost:8000/api/auth/registration',
+    'http://localhost:5000/api/auth/registration',
     {
       name: data.name,
       surname: data.surname,
