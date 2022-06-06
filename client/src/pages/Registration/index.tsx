@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import cn from 'classnames';
+import axios from 'axios';
+
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Wrapper from '../../components/Wrapper';
+
 import classes from './style.module.css';
-import axios from 'axios';
+import cn from 'classnames';
 
 interface IRegistration {
   name?: string;
@@ -17,12 +19,7 @@ interface IRegistration {
 const registration = async (data: IRegistration) => {
   const response = await axios.post(
     'http://localhost:5000/api/auth/registration',
-    {
-      name: data.name,
-      surname: data.surname,
-      email: data.email,
-      password: data.password,
-    }
+    data
   );
   console.log(response.data);
 };
